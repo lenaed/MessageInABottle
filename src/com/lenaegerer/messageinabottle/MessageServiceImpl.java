@@ -1,3 +1,8 @@
+package com.lenaegerer.messageinabottle;
+
+import com.lenaegerer.messageinabottle.Message;
+import com.lenaegerer.messageinabottle.MessageService;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

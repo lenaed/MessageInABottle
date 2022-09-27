@@ -1,3 +1,8 @@
+package com.lenaegerer.messageinabottle;
+
+import com.lenaegerer.messageinabottle.Message;
+import com.lenaegerer.messageinabottle.MessageService;
+import com.lenaegerer.messageinabottle.MessageServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

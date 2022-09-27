@@ -1,3 +1,5 @@
+package com.lenaegerer.messageinabottle;
+
 public class Message {
     private String text;
     private String id;
@@ -57,7 +59,7 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message{" +
+        return "com.lenaegerer.messageinabottle.Message{" +
                 "text='" + text + '\'' +
                 ", id=" + id +
                 ", senderId=" + senderId +

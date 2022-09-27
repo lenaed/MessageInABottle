@@ -1,3 +1,7 @@
+package com.lenaegerer.messageinabottle;
+
+import com.lenaegerer.messageinabottle.Message;
+
 import java.util.List;
 
 public interface MessageService {
