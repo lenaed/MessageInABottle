@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://bluechip:3306/a
+    username: a
+    password: a
