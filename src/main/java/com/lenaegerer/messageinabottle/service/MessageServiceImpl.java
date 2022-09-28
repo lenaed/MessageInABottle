@@ -10,9 +10,11 @@ import java.util.UUID;
 @Service
 public class MessageServiceImpl implements MessageService {
 
-   List<Message> messages = new ArrayList<>();
+    private final UserService userService;
+   private final List<Message> messages = new ArrayList<>();
 
-    public MessageServiceImpl() {
+    public MessageServiceImpl(UserService userService) {
+        this.userService = userService;
         addMessagesForTesting();
     }
 
@@ -34,7 +36,8 @@ public class MessageServiceImpl implements MessageService {
 
 
     @Override
-    public List<Message> getUnread(String receiverId) {
+    public List<Message> getUnread() {
+        String receiverId = userService.getCurrentUserId();
         List<Message> unread = new ArrayList();
 
         for (Message m : messages) {
@@ -59,7 +62,8 @@ public class MessageServiceImpl implements MessageService {
     int count;
 
     @Override
-    public void send(String text, String senderId, String receiverId) {
+    public void send(String text, String receiverId) {
+        String senderId = userService.getCurrentUserId();
         Message m = new Message(text, UUID.randomUUID().toString(), senderId, receiverId, false);
         messages.add(m);
         count++;

@@ -18,16 +18,16 @@ public class MessageController {
     }
 
     @GetMapping("/message-unread")
-    public List<MessageDTO> getUnread(@RequestHeader String userId) {
-        List<Message> unreadMessages = messageService.getUnread(userId);
+    public List<MessageDTO> getUnread() {
+        List<Message> unreadMessages = messageService.getUnread();
         List<MessageDTO> unread = unreadMessages.stream().map(messageMapper::toDto).collect(Collectors.toList());
         return unread;
     }
 
 
     @PostMapping("/message")
-    public void send(@RequestHeader String userId, @RequestBody MessageDTO body) {
-        messageService.send(body.getText(), userId, body.getReceiverId());
+    public void send(@RequestBody MessageDTO body) {
+        messageService.send(body.getText(), body.getReceiverId());
     }
 
     @PutMapping("/markasread")
