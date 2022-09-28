@@ -1,19 +1,11 @@
-package com.lenaegerer.messageinabottle;
+package com.lenaegerer.messageinabottle.api;
 
-public class Message {
+public class MessageDTO {
     private String text;
     private String id;
     private String senderId;
     private String receiverId;
     private boolean isRead;
-
-    public Message(String text, String id, String senderId, String receiverId, boolean isRead) {
-        this.text = text;
-        this.id = id;
-        this.senderId = senderId;
-        this.receiverId = receiverId;
-        this.isRead = isRead;
-    }
 
 
 
@@ -59,7 +51,7 @@ public class Message {
 
     @Override
     public String toString() {
-        return "com.lenaegerer.messageinabottle.Message{" +
+        return "com.lenaegerer.messageinabottle.model.Message{" +
                 "text='" + text + '\'' +
                 ", id=" + id +
                 ", senderId=" + senderId +
@@ -68,3 +60,6 @@ public class Message {
                 '}';
     }
 }
+
+
+
