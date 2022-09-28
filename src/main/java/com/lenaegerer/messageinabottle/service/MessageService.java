@@ -1,6 +1,6 @@
-package com.lenaegerer.messageinabottle;
+package com.lenaegerer.messageinabottle.service;
 
-import com.lenaegerer.messageinabottle.Message;
+import com.lenaegerer.messageinabottle.model.Message;
 
 import java.util.List;
 
