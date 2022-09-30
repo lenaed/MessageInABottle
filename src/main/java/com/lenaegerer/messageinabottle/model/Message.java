@@ -1,11 +1,22 @@
 package com.lenaegerer.messageinabottle.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity(name="message")
 public class Message {
     private String text;
+    @Id
     private String id;
+    @Column(name="sender_id")
     private String senderId;
+    @Column(name="receiver_id")
     private String receiverId;
     private boolean isRead;
+
+    public Message() {
+    }
 
     public Message(String text, String id, String senderId, String receiverId, boolean isRead) {
         this.text = text;
@@ -14,7 +25,6 @@ public class Message {
         this.receiverId = receiverId;
         this.isRead = isRead;
     }
-
 
 
     public String getText() {
