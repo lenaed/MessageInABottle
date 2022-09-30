@@ -37,7 +37,7 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public List<Message> getUnread() {
-        String receiverId = userService.getCurrentUserId();
+        String receiverId = userService.getCurrentUser().getId();
         List<Message> unread = new ArrayList();
 
         for (Message m : messages) {
@@ -63,7 +63,7 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public void send(String text, String receiverId) {
-        String senderId = userService.getCurrentUserId();
+        String senderId = userService.getCurrentUser().getId();
         Message m = new Message(text, UUID.randomUUID().toString(), senderId, receiverId, false);
         messages.add(m);
         count++;
