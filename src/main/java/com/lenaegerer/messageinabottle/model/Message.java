@@ -1,7 +1,14 @@
 package com.lenaegerer.messageinabottle.model;
 
+import org.springframework.data.repository.cdi.Eager;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Message {
     private String text;
+    @Id
     private String id;
     private String senderId;
     private String receiverId;

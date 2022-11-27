@@ -1,6 +1,12 @@
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://bluechip:3306/a
-    username: a
-    password: a
+    url: jdbc:mysql://localhost:3306/messageInABottle
+    username: root
+    password: p4ssw0rd
+
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update

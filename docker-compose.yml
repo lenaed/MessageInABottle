@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+
+  db:
+    image: mysql:8.0
+    environment:
+      - MYSQL_DATABASE=messageinabottle
+      - MYSQL_ROOT_PASSWORD=a
+    ports:
+      - '3306:3306'
+
+  messageinabottle:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/messageInABottle
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=a
+
+
