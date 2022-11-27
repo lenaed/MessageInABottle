@@ -1,4 +1,4 @@
-package com.lenaegerer.messageinabottle.service;
+package com.lenaegerer.messageinabottle.services;
 
 import com.lenaegerer.messageinabottle.model.Message;
 

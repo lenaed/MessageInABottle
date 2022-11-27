@@ -1,6 +1,7 @@
-package com.lenaegerer.messageinabottle.service;
+package com.lenaegerer.messageinabottle.services;
 
 import com.lenaegerer.messageinabottle.model.User;
+import com.lenaegerer.messageinabottle.repositories.UserRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;

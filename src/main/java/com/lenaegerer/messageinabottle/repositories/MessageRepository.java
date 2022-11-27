@@ -1,4 +1,4 @@
-package com.lenaegerer.messageinabottle.service;
+package com.lenaegerer.messageinabottle.repositories;
 
 import com.lenaegerer.messageinabottle.model.Message;
 import org.springframework.data.repository.CrudRepository;

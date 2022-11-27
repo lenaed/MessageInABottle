@@ -1,5 +1,19 @@
 package com.lenaegerer.messageinabottle.api;
 
+/**
+ *
+ * JSON
+ *
+ * {
+ *     "id" : "pppapapa",
+ *     "text" : "assasasaassa",
+ *     "senderId" : "aaaaa",
+ *     "receiverId" : "aaaaaaa",
+ *     "isRead" : false
+ * }
+ *
+ */
+
 public class MessageDTO {
     private String text;
     private String id;

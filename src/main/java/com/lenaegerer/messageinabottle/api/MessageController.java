@@ -1,7 +1,7 @@
 package com.lenaegerer.messageinabottle.api;
 
 import com.lenaegerer.messageinabottle.model.Message;
-import com.lenaegerer.messageinabottle.service.MessageService;
+import com.lenaegerer.messageinabottle.services.MessageService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,7 +31,16 @@ public class MessageController {
     }
 
     @PutMapping("/markasread")
-    public void markAsRead(String messageId) {
-        messageService.markAsRead(messageId);
+    public void markAsRead(
+            @RequestParam String messageId,
+            @RequestParam String receiver,
+            @RequestHeader("sender-id") String senderId
+    ) {
+        ///
+    }
+
+    @PutMapping("/message/{id}/receiver")
+    public void getReceiver(@PathVariable("id") String messageId) {
+        ///
     }
 }

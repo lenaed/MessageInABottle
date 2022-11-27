@@ -3,6 +3,7 @@
 //import com.lenaegerer.messageinabottle.model.Message;
 //import com.lenaegerer.messageinabottle.service.MessageService;
 //import com.lenaegerer.messageinabottle.service.MessageServiceImpl;
+//import com.lenaegerer.messageinabottle.service.UserRepository;
 //import com.lenaegerer.messageinabottle.service.UserService;
 //import org.junit.jupiter.api.BeforeEach;
 //import org.junit.jupiter.api.Test;
@@ -19,10 +20,11 @@
 //    private String currentUserId;
 //
 //    private class MockUserService extends UserService {
-//        @Override
-//        public String getCurrentUserId() {
-//            return currentUserId;
+//        public MockUserService(UserRepository userRepository) {
+//            super(userRepository);
 //        }
+//
+//
 //    }
 //
 //

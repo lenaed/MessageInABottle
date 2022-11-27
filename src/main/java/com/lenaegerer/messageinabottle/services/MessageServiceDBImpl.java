@@ -1,11 +1,13 @@
-package com.lenaegerer.messageinabottle.service;
+package com.lenaegerer.messageinabottle.services;
 
 import com.lenaegerer.messageinabottle.model.Message;
+import com.lenaegerer.messageinabottle.repositories.MessageRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class MessageServiceDBImpl implements MessageService {
@@ -25,10 +27,9 @@ public class MessageServiceDBImpl implements MessageService {
     @Override
     public List<Message> getUnread() {
         String receiverId = userService.getCurrentUser().getId();
-        List<Message> unread = messageRepository.findAllByReceiverIdAndIsRead(receiverId, false);
-        return unread;
+        List<Message> unreadOnes = messageRepository.findAllByReceiverIdAndIsRead(receiverId, false).stream().collect(Collectors.toList());
+        return unreadOnes;
     }
-
 
     @Override
     public Message getById(String id) {
@@ -54,4 +55,6 @@ public class MessageServiceDBImpl implements MessageService {
         message.setRead(true);
         messageRepository.save(message);
     }
+
+
 }
